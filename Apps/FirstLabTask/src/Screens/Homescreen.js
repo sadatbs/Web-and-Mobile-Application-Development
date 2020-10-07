@@ -1,20 +1,40 @@
 import React from "react";
-import { Text, StyleSheet, View, Button } from "react-native";
+import { Text, StyleSheet, View, Button,Image,TouchableOpacity } from "react-native";
 
 const HomeScreen = (props) => {
-  //console.log(props);
+
   return (
-    <View>
+    <View style={{
+        justifycontent:'center'
+      }}>
+        <Image
+         style={{
+        alignSelf:'center'
+      }}  source = {require('./../../assets/IUTlogo.jpg')} 
+        />
       <Text style={styles.textStyle}>Department of CSE</Text>
       <Text style={styles.textStyle}>Programme: SWE</Text>
-      <Button style = {styles.stretchContent}
+      <TouchableOpacity
+      onPress = {function (){
+        props.navigation.navigate("Profile")
+      }
+      }>
+        <Text style={styles.textStyle}>My Profile</Text>
+      </TouchableOpacity>
+      
+      <Button 
         title="Semester Wise Course List"
         onPress={function () {
           props.navigation.navigate("Faculty List")
         }}
       />
 
-      <Button style = {styles.stretchContent}
+     <View style={{
+         width:20,
+         height:20
+    }} />
+
+      <Button 
         title="List of Faculty Members"
         onPress={function () {
           props.navigation.navigate("Faculty List");
@@ -32,13 +52,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginVertical: 20
 },
-stretchContent: {
-    flex: 1,
-    color: 'white',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
 });
 
 export default HomeScreen;

@@ -17,7 +17,6 @@ const FacultyListScreen = () => {
         style={styles.ListStyle}
         data={faculty}
         renderItem={function ({ item }) {
-          //there is an error "Text strings must be rendered within a <Text> component"
           return <Text style={styles.textStyle}>{item.key+"."+item.name}</Text>;
         }}
       />
@@ -32,8 +31,6 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   viewStyle: {
-    borderColor: "red",
-    borderWidth: 0,
   },
   ListStyle: {},
 });
