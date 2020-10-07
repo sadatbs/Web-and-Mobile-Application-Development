@@ -4,9 +4,9 @@ import { Text, StyleSheet, View, Button,Image,TouchableOpacity,FlatList } from "
 
 const SemesterScreen = (props) => {
     const semester = [
-        {name: "1st",key:"1"},
-        {name: "2nd",key:"2"},
-        {name: "3rd",key:"3"},
+        {name: "First Semester",key:"1"},
+        {name: "Second Semester",key:"2"},
+        {name: "Third Semester",key:"3"},
     ]
     return(
         <View>

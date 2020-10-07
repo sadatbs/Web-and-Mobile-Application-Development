@@ -30,19 +30,20 @@ const CourseListScreen = (props) => {
   const sem = props.route.params.sem;
   let courses = null;
 
-  if(sem === '1st')
+  if(sem === 'First Semester')
   {
     courses = sem1course;
-  }else if(sem === '2nd')
+  }else if(sem === 'Second Semester')
   {
     courses = sem2course;
-  }else if(sem === '3rd')
+  }else if(sem === 'Third Semester')
   {
     courses = sem3course;
   }
 
   return (
     <View style={styles.viewStyle}>
+        <Text style = {{color: 'blue', fontSize:30, alignItems:'center' }}>{sem}</Text>
       <FlatList
         style={styles.ListStyle}
         data={courses}
