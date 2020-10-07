@@ -25,7 +25,7 @@ const HomeScreen = (props) => {
       <Button 
         title="Semester Wise Course List"
         onPress={function () {
-          props.navigation.navigate("Faculty List")
+          props.navigation.navigate("Semesters")
         }}
       />
 
